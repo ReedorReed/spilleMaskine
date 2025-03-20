@@ -1,0 +1,269 @@
+/*Base reset*/
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+}
+
+/*body og container base layout*/
+
+body {
+	font-family: Arial, sans-serif;
+	background-image: url(/RTS/Beyond/lektion-01-beyond/SpillemaskineOpg/images/COLOURBOX65702718.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 0;
+	margin: 0 auto;
+	font-family: 'Doto', sans-serif;
+}
+
+#container {
+	padding: 20px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* Spille maskine indhold */
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 800px;
+}
+
+.wrapper {
+	height: 550px;
+	width: 400px;
+	background-color: rgba(51, 51, 51, 0.9);
+	border-radius: 50px;
+	border: solid 9px #04ff29;
+	padding: 20px;
+	box-shadow: 0 0 50px 15px #04ff29;
+}
+
+/* Overskrift */
+h1 {
+	text-align: center;
+	color: #04ff29;
+	margin-bottom: 30px;
+	font-family: 'Doto', sans-serif;
+	font-size: 42px;
+}
+
+#title {
+	animation: blink 2s infinite;
+}
+
+/* Spillemaskine vinduer */
+.slots {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.slot {
+	width: 100px;
+	height: 100px;
+	background-color: #333;
+	border: 3px solid #04ff29;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slot img {
+	width: 80px;
+	height: 80px;
+	object-fit: contain;
+}
+
+/* Knapper */
+
+button {
+	display: block;
+	margin: 10px auto;
+	padding: 10px 20px;
+	font-size: 18px;
+	background-color: #05ed28;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	font-family: 'Doto', sans-serif;
+	font-weight: 700;
+}
+
+button:hover {
+	background-color: #259200;
+	border: solid white 0.5px;
+}
+
+#slot-credit {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+	color: #fff;
+	text-shadow: 0.2px 0.2px #fff;
+}
+
+/* Checkbox og checkbox knapper */
+label,
+input[type='checkbox'] {
+	margin: 0 5px;
+	color: #fff;
+	cursor: pointer;
+}
+input[type='checkbox'] {
+	display: none;
+}
+
+#hold-slot1:checked + #hold-label1 {
+	color: #04ff29;
+	border: solid #04ff29 1px;
+	font-weight: bold;
+}
+#hold-slot2:checked + #hold-label2 {
+	color: #04ff29;
+	border: solid #04ff29 1px;
+	font-weight: bold;
+}
+#hold-slot3:checked + #hold-label3 {
+	color: #04ff29;
+	border: solid #04ff29 1px;
+	font-weight: bold;
+}
+.hold-controls {
+	display: flex;
+	justify-content: space-around;
+	margin: 15px 0;
+}
+
+label {
+	border: solid white 1px;
+	border-radius: 5px;
+	padding: 4px;
+}
+
+label:hover {
+	border: solid #04ff29 1px;
+	color: #04ff29;
+}
+
+/* Dollartegn */
+
+#dollar-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.dollar-sign {
+	margin: 0 2rem 2rem 2rem;
+	font-family: monospace;
+	font-size: 60px;
+	font-weight: bold;
+	color: #eeff04;
+	text-shadow: 2px 2px 8px #e59d03;
+	animation: rotate 4s infinite;
+}
+
+/* matrix kode banner */
+#top-banner {
+	width: 200px;
+	height: 750px;
+	margin-right: 12rem;
+	box-shadow: 0 0 50px 15px #04ff29;
+	border-radius: 15px;
+}
+
+#bottom-banner {
+	width: 200px;
+	height: 750px;
+	margin-left: 12rem;
+	box-shadow: 0 0 50px 15px #04ff29;
+	border-radius: 15px;
+}
+
+/* Animationer */
+@keyframes spinAnimation {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-20px);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	75% {
+		transform: translateY(20px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotateY(180deg);
+	}
+	33% {
+		transform: rotateY(-180deg);
+	}
+	66% {
+		transform: rotateY(180deg);
+	}
+	100% {
+		transform: rotateY(-180deg);
+	}
+}
+
+/*responsiv*/
+
+@media (max-width: 800px) {
+	aside {
+		display: none;
+	}
+
+	.wrapper {
+		height: auto;
+		width: 300px;
+	}
+
+	main {
+		height: auto;
+	}
+
+	#container {
+		display: flex;
+		justify-content: center;
+	}
+}

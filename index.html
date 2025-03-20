@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="da">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<script src="js/dom-elementer.js" defer></script>
+		<script src="js/script.js" defer></script>
+		<script src="js/credits.js" defer></script>
+		<title>Money Matrix Slot Machine</title>
+	</head>
+	<body>
+		<div id="container">
+			<aside>
+				<figure class="banner">
+					<img src="images/saw lot GIF.gif" alt="matrix code" id="top-banner" />
+				</figure>
+			</aside>
+			<main>
+				<div class="wrapper">
+					<h1 id="title">Money Matrix</h1>
+
+					<div class="slots">
+						<div class="slot">
+							<img src="icons/appelsin.png" alt="" id="slot1" />
+						</div>
+						<div class="slot">
+							<img src="icons/appelsin.png" alt="" id="slot2" />
+						</div>
+						<div class="slot">
+							<img src="icons/appelsin.png" alt="" id="slot3" />
+						</div>
+					</div>
+					<div class="hold-controls">
+						<input type="checkbox" name="hold1" id="hold-slot1" />
+						<label for="hold-slot1" id="hold-label1">Hold</label>
+						<input type="checkbox" name="hold2" id="hold-slot2" />
+						<label for="hold-slot2" id="hold-label2">Hold</label>
+						<input type="checkbox" name="hold3" id="hold-slot3" />
+						<label for="hold-slot3" id="hold-label3">Hold</label>
+					</div>
+
+					<button class="spin">Spin</button>
+					<button id="add-credit" class="add-credit">Add Credits</button>
+					<p id="slot-credit">Credits: <span id="credit-number"></span></p>
+					<div id="dollar-wrapper">
+						<p class="dollar-sign">$</p>
+						<p class="dollar-sign">$</p>
+						<p class="dollar-sign">$</p>
+					</div>
+				</div>
+
+				<audio
+					src="audio/you-win-sequence-3-183950.mp3"
+					style="display: none"
+					id="audio"></audio>
+
+				<audio
+					src="audio/cash-register-purchase-87313.mp3"
+					style="display: none"
+					id="audio2"></audio>
+
+				<audio
+					src="audio/game-over-arcade-6435.mp3"
+					style="display: none"
+					id="audio3"></audio>
+			</main>
+			<aside>
+				<figure class="banner">
+					<img
+						src="images/saw lot GIF.gif"
+						alt="matrix code"
+						id="bottom-banner" />
+				</figure>
+			</aside>
+		</div>
+	</body>
+</html>
