@@ -180,7 +180,7 @@ label:hover {
 
 /* matrix kode banner */
 #top-banner {
-	width: 200px;
+	width: 250px;
 	height: 750px;
 	margin-right: 12rem;
 	box-shadow: 0 0 50px 15px #04ff29;
@@ -188,7 +188,7 @@ label:hover {
 }
 
 #bottom-banner {
-	width: 200px;
+	width: 250px;
 	height: 750px;
 	margin-left: 12rem;
 	box-shadow: 0 0 50px 15px #04ff29;
